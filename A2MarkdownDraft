@@ -6,25 +6,25 @@ output: pdf_document
 ---
 
 A review of what Gandrud wants:
-In light of some discussions I had in my office hours yesterday, I want to make a clarification about the focus of Assignment 2.
 
-`For the assignment you need to:`
+1. justify why it is interesting (Intro. with maybe 3-4 sentences)
+2. provide basic literature review (properly cited using BibTeX)
+3. identify data sources/methodologies that you can access to help answer your question
 
-justify why it is interesting, provide basic literature review (properly cited using BibTeX), and identify data sources/methodologies that you can access to help answer your question
-
-Some students had questions about where to put the focus of their write up. The research question and lit. review are indeed important, but I would suggest strongly developing your discussion of data source/methodology. This is the focus of our class.
+**suggest strongly developing your discussion of data source/methodology**
 
 So, you need to do things such as:
 
-clearly identify and cite your intended data sources
+*clearly identify and cite your intended data sources*
 
-describe what format the data is currently in and how you intend to clean it up so that it is usable for statistical analysis
+*describe what format the data is currently in and how you intend to clean it up so that it is usable for statistical analysis*
 
-given your data and research question, what types of descriptive and inferential statistical are appropriate and feasible for you to answer your question (be as specific as possible including possibly looking up R functions and packages that implement these statistics.
+*given your data and research question, what types of descriptive and inferential statistical are appropriate and feasible for you to answer your question (be as specific as possible including possibly looking up R functions and packages that implement these statistics.*
 
 These items are basically a plan for Assignment 3.
 
-In fact in your lit. review I would even discuss these issues as well, e.g. what data and methods have previous researchers used and how do they compare to what you plan for your project?
+In fact in your lit. review I would even discuss these issues as well, e.g. *what data and methods have previous researchers used and how do they compare to what you plan for your project?*
+Fortunately, there are various forms 
 
 Sorry for the late clarification.
 
