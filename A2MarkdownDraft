@@ -10,11 +10,13 @@ AND
 How do we get to answering it?  
 
 What methods have researchers used and how do they compare to your methods?
+
 There are essentially two camps of researchers in the applied fields using the GTD:
+
 1. Geography
 2. Political Science/International Relations
 
-In most of the cases, there is a convergence of the two albeit in different magnitudes.  For example, geographers use the data to make sense of geospatial path dependencies of terrorist groups and social network analysis (physical and human geography), whereas political scientists use the data to undertake more rigorous qualitative analysis.
+In most of the cases, there is a convergence of the two albeit to different extents.  For example, geographers use the data to make sense of geospatial path dependencies of terrorist groups and social network analysis (physical and human geography), whereas political scientists use the data to undertake more rigorous qualitative analysis.
 
 Our study combines both, as qualitative claims are driving the quantitative study,  but our ultimate goal is *descriptive*.  Here, the we are using statistical anlaysis as a means for descritive inference such that our results will leads us to reject a null hypothesis that attacks have no changed over time in the urban context.
 
@@ -28,18 +30,17 @@ A review of what Gandrud wants:
 
 So, you need to do things such as:
 
-*clearly identify and cite your intended data sources*
+  *clearly identify and cite your intended data sources*
 
-*describe what format the data is currently in and how you intend to clean it up so that it is usable for statistical analysis*
+  *describe what format the data is currently in and how you intend to clean it up so that it is usable for statistical analysis*
 
-*given your data and research question, what types of descriptive and inferential statistical are appropriate and feasible for you to answer your question (be as specific as possible including possibly looking up R functions and packages that implement these statistics.*
+  *given your data and research question, what types of descriptive and inferential statistical are appropriate and feasible for you to answer your question (be as specific as possible including possibly looking up R functions and packages that implement these statistics.*
 
 These items are basically a plan for Assignment 3.
 
 In fact in your lit. review I would even discuss these issues as well, e.g. *what data and methods have previous researchers used and how do they compare to what you plan for your project?*
 Fortunately, there are various forms 
 
-Sorry for the late clarification.
 
 A review of what is actually on GitHub:
 `Proposal for your Collaborative Research Project.`
