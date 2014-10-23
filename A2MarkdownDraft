@@ -1,0 +1,84 @@
+---
+title: "Master's Thesis Proposal"
+author: "Sascha Schuster, Lukas Bretzinger, Cameron Reed"
+date: "October 24, 2014"
+output: pdf_document
+---
+
+A review of what Gandrud wants:
+In light of some discussions I had in my office hours yesterday, I want to make a clarification about the focus of Assignment 2.
+
+`For the assignment you need to:`
+
+justify why it is interesting, provide basic literature review (properly cited using BibTeX), and identify data sources/methodologies that you can access to help answer your question
+
+Some students had questions about where to put the focus of their write up. The research question and lit. review are indeed important, but I would suggest strongly developing your discussion of data source/methodology. This is the focus of our class.
+
+So, you need to do things such as:
+
+clearly identify and cite your intended data sources
+
+describe what format the data is currently in and how you intend to clean it up so that it is usable for statistical analysis
+
+given your data and research question, what types of descriptive and inferential statistical are appropriate and feasible for you to answer your question (be as specific as possible including possibly looking up R functions and packages that implement these statistics.
+
+These items are basically a plan for Assignment 3.
+
+In fact in your lit. review I would even discuss these issues as well, e.g. what data and methods have previous researchers used and how do they compare to what you plan for your project?
+
+Sorry for the late clarification.
+
+A review of what is actually on GitHub:
+`Proposal for your Collaborative Research Project.`
+
+Deadline: Week 6
+
+Submbit: A (max) 2,000 word proposal created with R Markdown. The proposal will:
+
+State your research question. And justify why it is interesting.
+
+Provide a basic literature review (properly cited with BibTeX).
+
+Identify data sources and appropriate research methodologies for answering your question.
+
+As always, submit the entire GitHub repo.
+
+
+*This is the first attempt to prepare data for statistical analysis (assignment 2).*  
+
+# Introduction (Why This Matters)
+
+Cities are under siege.  In the past five years, violent extremist groups have attracted significant international attention using the urban center as a stage.  Consider the following scenarios.  In 2008, Pakistan-based Lashkar-e-Taiba launched a coordinated assault on Mumbai, India lasting three days, which resulted in 164 deaths of innocent civilians.  In 2013, Somalia-based Al-Shabaab infiltrated the Westgate mall in Nairobi, Kenya killing 67 and injuring 175 civilians.  Terrorist groups pose tremendous risk to the vulnerability of cities that depend on institutions for security.  In both cases, the groups exploited with relative ease the complex systems of the city to achieve desired outcomes, thereafter sparking debate about the nature of terrorist group targeting and how to locate, protect against, and mitigate attacks in the face of massive global trends taking place in cities, such as urbanization, migration, and interconnectedness.  The urban context seems to be rising in importance for analysis of political violence.  For policymakers and security practitioners, despite large securitization measures, hardline or softline, that purport to reduce the probability of terrorist attacks, will always present some margin of opportunity that has large-scale effects on society.  Therefore, the research question central to this study remains—what evidence substantiates claims of urban terrorism trends and are terrorist groups likely to target elements that are inextricably tied to urban life?  
+
+Since September 11th, the fields of geography, urban studies, and political science have contributed serious intellectual capital to the understanding of terrorist attacks, strategic decision-making, and conceptualization of terrorist targeting behavior geospatially.  Our study aims to fill in the gaps of this literature by describing urban trends on a global scale through a large-N analysis of the Global Terrorism Database and close examination of two cases that illuminate nuances of urban experience.  The first section of this prospectus reviews existing literature on urban terrorism, strategic targeting of terrorism groups, and geographical mapping of terrorism.  In the second section, we analyze the definitions of terrorism adherent to the GTD and address the limitations of definitions for our study.  The third deals with the mixed-methods research design, including quantitative methods and case selection.  Then, we will discuss potential hypotheses, results, and attempt to explore how we will systematically compare two cases in a framework of analysis.  Finally, we will conclude our study, highlight implications, and note directions for further research.          
+
+# Research Question
+
+*What are the trends in violence in the urban context?* 
+
+# Literature Review
+
+Urban terrorism is by no means a new concept, as it arises in guerilla and insurgency literature (Karber; Lupsha; Grabosky).  Indeed, the urban context was a feature of Walter Laquer’s early treatment of the guerilla warfare—groups like the Mau Mau of Kenya, the Irish Republican Army, and the Front de Liberacion Nationale all employed urban tactics against a colonial power (Lacquer 1997).  Martha Crenshaw’s seminal piece on the causes of terrorism highlighted the enduring importance of modernization and urbanization, such that they increase the opportunity for terrorist groups to execute attacks (Crenshaw 1981).  Most of the literature leading up to 9/11 recognized the urban element, but had not fully addressed linkages between urbanization and security of the state, let alone the security of civilians and Islamic terrorism, which would dominate discourse in the 21st century.   
+
+Prominent theorists of warfare re-problematize the issue taking into consideration upstream issues of globalization, development, and society.  David Kilcullen presents a glimpse into what he deems a future conflict environment—the urban mega-city.  [Presents theory of competitive control and in-depth case study, but does not carry out a systematic analysis of these cases.  The literature lacks intensive and systematic research on the mega-city notwithstanding Kilcullen’s foundational work.
+
+# Data Cleaning and Statistical Methodology
+
+## Data Sets 
+
+The START GTD Maryland.
+
+## Analysis (What We Will Do)
+
+We want to determine the urbanity factor of each attack.
+
+```{r, echo=FALSE}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
