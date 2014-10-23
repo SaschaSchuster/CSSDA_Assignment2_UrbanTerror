@@ -3,6 +3,7 @@ title: "Research Proposal - A Turn Toward Urban"
 author: "Sascha Schuster, Lukas Bretzinger, Cameron Reed"
 date: "October 24, 2014"
 output: pdf_document
+  toc: true
 bibliography: BiblioProposal.bib
 ---
 
