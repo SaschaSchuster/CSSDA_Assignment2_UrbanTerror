@@ -7,10 +7,6 @@ output: pdf_document
 bibliography: BiblioProposal.bib
 ---
 
-```{r, echo=FALSE
-setwd("~/Desktop/GTDClean")
-}
-
 *This is the explanation for our research question and preparation of data for statistical analysis (assignment 2).* 
 
 # Topic and Relevance
