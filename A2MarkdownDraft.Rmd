@@ -51,13 +51,7 @@ GTD is based on PGIS and PGIS is the most granular and comprehensive.  To illust
 
 ## Statistical Methodology
 **Variable**: Urbanity of terrorists’ targets.
-The GTD defines a terrorist attack as the threatened or actual use of illegal force and violence by a non-state actor to attain a political, economic, religious, or social goal through fear, coercion, or intimidation. In order to consider an incident for inclusion in the GTD, all three of the following attributes must be present:
-
-  1. The incident must be intentional.
-  2. The incident must entail some level of violence or threat of violence--including damage to property and violence against people.
-  3. The perpetrators of the incidents must be sub-national actors.
-
-*Note: The database does not include acts of state terrorism.*
+The GTD defines a terrorist attack as the threatened or actual use of illegal force and violence by a non-state actor to attain a political, economic, religious, or social goal through fear, coercion, or intimidation. In order to consider an incident for inclusion in the GTD, all attributes must be present. The database does not include acts of state terrorism.*
 
 In order to use the database, we have to stick to the definitions given, limiting us to non-state terrorism.
 
