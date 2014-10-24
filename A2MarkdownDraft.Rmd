@@ -85,7 +85,6 @@ After finding a possible correlation between time and targets urbanity and locat
 library(foreign)
 library(car)
 library(ggplot2)
-
 library(RCurl)
 
 #download a limited GTD we created for this assignment (5MB instead of 100MB) file 
