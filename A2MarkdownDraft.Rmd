@@ -72,7 +72,7 @@ Necessary controls are the:
   * Relative growth of urban life (populations and space on the country scale [@worldbank] )
   * Civil war (1-0 dummy from the Correlates of War [@COW2007] Project, Intra-State War Database 4.0 which is the most updated one)
   * Capital Cities (coded by hand)
-  * Changes of collecting entities: PIGS until 1997, CETIS until 2008, ISVG until 2011 and START since 2011" (all in the GTD)
+  * Changes of collecting entities: PIGS until 1997, CETIS until 2008, ISVG until 2011 and START since 2011 (all in the GTD)
 
 To elaborate on the last point, we created three preliminary charts to shop how transition in data collecting entities influences variables of our interest. 
   
