@@ -69,21 +69,26 @@ Plotframe <- data.frame(year=GTD$iyear, TUP=TUPforPlot, PROP=PROPforPlot, HUM=GT
 intersepz=data.frame(date=as.numeric(c("27", "38", "41")), date2=as.numeric(c("1997", "2009", "2011")), event=c("PGIS Data Collection End", "CETIS Data Collection End", "ISVG Data Collection End"))
 
 # the first plot shows the count of attack on our categoriesed targets
-qplot(factor(year), data=Plotframe, geom = "freqpoly", color = TUP, group = TUP, ylab= "sum of attacks", xlab= "year",
+PlotTUP <- qplot(factor(year), data=Plotframe, geom = "freqpoly", color = TUP, group = TUP, ylab= "sum of attacks", xlab= "year",
 main="Sum of attacks per year
-with indication for the transition on collecting entities:
-PIGS until 1997, CETIS until 2008, ISVG until 2011 and START since 2011") + geom_vline(data=intersepz,
+with indication for the transition of collecting entities:
+PIGS until 1997, CETIS until 2008, ISVG until 2011 and START since 2011") + geom_vline(data=intersepz, 
                                                                                        mapping=aes(xintercept=date))
+PlotTUP + theme(axis.text.x = element_text(angle = 90), complete = TRUE)
+
 
 # the second plot shows the count of attack in different categories of economic damage
-qplot(factor(year), data=Plotframe, geom = "freqpoly", color = PROP, group = PROP, ylab= "sum of attacks", xlab= "year",
+PlotPROP <- qplot(factor(year), data=Plotframe, geom = "freqpoly", color = PROP, group = PROP, ylab= "sum of attacks", xlab= "year",
 main="Sum of attacks per year
-with indication for the transition on collecting entities:
+with indication for the transition of collecting entities:
 PIGS until 1997, CETIS until 2008, ISVG until 2011 and START since 2011") + geom_vline(data=intersepz,
                                                                                        mapping=aes(xintercept=date))
+PlotPROP + theme(axis.text.x = element_text(angle = 90), complete = TRUE)
+
+
 # the third plot shows the sum of killed and injured of attacks per year
-qplot(year, HUM, data=Plotframe, stat="summary", fun.y="sum", geom ="line",
-ylab= "sum of deaths and injured", main="Sum of casualties per year
-with indication for the transition on collecting entities:
-PIGS until 1997, CETIS until 2008, ISVG until 2011 and START since 2011") + geom_vline(data=intersepz,
+qplot(year, HUM, data=Plotframe, stat="summary", fun.y="sum", geom ="line", 
+ylab= "sum of deaths and injured", main="Sum of casualties per year 
+with indication for the transition of collecting entities:
+PIGS until 1997, CETIS until 2008, ISVG until 2011 and START since 2011") + geom_vline(data=intersepz, 
                                                                                        mapping=aes(xintercept=date2))
