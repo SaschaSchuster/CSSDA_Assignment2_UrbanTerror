@@ -84,9 +84,6 @@ library(foreign)
 library(car)
 library(ggplot2)
 
-#set Working Depositoty
-setwd("C:/Users/Lokus/Dropbox/Master Thesis/GitHub-Repo/UrbanTerror")
-
 #Load the Global Terrorism Database
 rawGTD <- read.csv("GTD.csv", header=TRUE)
 
@@ -95,7 +92,7 @@ rawGTD <- read.csv("GTD.csv", header=TRUE)
 #We therefore filter the database to make it fit our needs. We erase over a 100 variables.
 #We only want to look at successfull terror attacks and include basic data on time, location and target.
 
-GTD <- subset(rawGTD, select = c(eventid, iyear, imonth, iday, country, region, attacktype1, targtype1, targsubtype1, propextent, nkill, nwound),iyear >= 1970 & success == 1, na.strings = c("", " "))
+GTD <- subset(rawGTD, select = c(eventid, iyear, imonth, iday, country, region, attacktype1, targtype1, targsubtype1, propextent, nkill, nwound),iyear >= 1970, na.strings = c("", " "))
 
 ### We introduce our first scale: "Targets Urbanity Potential Scale (TUPscale)"
 GTD["TUPscale"] <- GTD$targsubtype1
