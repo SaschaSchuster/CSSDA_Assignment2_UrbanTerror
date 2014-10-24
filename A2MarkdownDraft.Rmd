@@ -73,7 +73,7 @@ The measure for the “urbanity of the target” has two components for us: loca
   1. *Location*: There are many ways to determine, if an attack took place in an urban environment. As GPS coordinates are available for the time after 2001, potentially one could find a way to include land use, population density and proximity to urban center in the analysis of the attack. This likely exceeds resources and time available to us. If we include the idea that our research interest lays in the intention to target urban life and space, then we can use another measure. This would be the relative size and importance of the city compared to the national and regional environment. We assume that a terrorist organization can choose between targets at least on a national level, and put together our own probably quickly hand-collected dataset with city like: 100 largest cities of the for each decade; largest cities for each county (between 2 and 25 depending on the country’s population determined with a simple mathematical formula); costal “Megacities” for each decade; “World Cities” for each decade. To combine the lists in a data frame, the vector names might be: Name of the city, hundred_largest_70s, hundred_largest_80s, hundred_largest_90s, hundred_largest_20s,  100 largest 21s, large_national_decade, megacity_decade, worldcity_decade, costal, capital… whereas anything but the name is a 0-1 binary. 
   2. *Target*: The target of the attack is coded in the GTD dataset with target and subtarget type. In order to weight them in terms of their representation of urbanity, we created categories of targets that represent aspects of urban life and space, with varying degrees: Expression of urban life (restaurant, hotel, apartment, etc.); infrastructure necessary to sustain urban life (water supply, port, electricity, etc.); employment (construction, factory, multinational corporation); police and governance; military and rural.  
 
-Merging the datasets over cities will be easy but special cases of city renaming must be accounted for, like East and West Berlin/Berlin, Bombay/Mumbai, etc. The combined dataset basically adds to the GTD a variable for potential urbanity of the targets and adds variables of quality to various cities due to their respective characteristics in relation to their national and regional peers. 
+Merging the datasets over cities will be easy, but special cases of city renaming must be accounted for, like East and West Berlin/Berlin, Bombay/Mumbai, etc. The combined dataset basically adds to the GTD a variable for potential urbanity of the targets and adds variables of quality to various cities due to their respective characteristics in relation to their national and regional peers. 
 
 # Analysis
 The analysis will focus on multivariate statistical regression models for describing a potential trend in the urbanity of terror attacks in terms of the chosen city and the chosen target over time. Descriptive inference such that our results will leads us to reject a null hypothesis that attacks have not changed over time in targeting urban life and space that goes beyond the growth of this space over time.  
@@ -81,9 +81,9 @@ The analysis will focus on multivariate statistical regression models for descri
 To include the success of the attacks, weights for killed and injured humans will be added to each attack, as well as property damage in a second round. It might be necessary to manipulate the property damage in terms of the relative wealth of the country to account in country variation in the potential wealth that can be destroyed. 
 Necessary controls are the:
 
-  *Relative growth of urban life and space on the country scale (World Bank Data)
-  *Civil war (1-0 dummy from the Correlates of War (COW) Project, Intra-State War Database 4.0 which is the most updated one)
-  *Capital Cities (coded by hand)
+  * Relative growth of urban life (populations and space on the country scale (World Bank Data)
+  * Civil war (1-0 dummy from the Correlates of War (COW) Project, Intra-State War Database 4.0 which is the most updated one)
+  * Capital Cities (coded by hand)
 
 After finding a possible correlation between time and targets urbanity and locations urbanity, analyzing trends in targeting behavior on the regional, country, or group level will be easy to execute as the GTD contain variables for all attacks. 
 
