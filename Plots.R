@@ -17,9 +17,14 @@
 library(foreign)
 library(car)
 library(ggplot2)
+library(RCurl)
 
 #download a limited GTD we created for this assignment (5MB instead of 100MB) file 
-download.file(url="http://bit.ly/1sjaJ2M", destfile="GTD.csv", quiet = FALSE)
+GTD_in_Memory <- getURL("https://rawgit.com/SaschaSchuster/CSSDA_Assignment2_UrbanTerror/master/GTD.csv", ssl.verifypeer=0L, followlocation=1L)
+writeLines(GTD_in_Memory,'GTD.csv')
+
+#Load the Global Terrorism Database
+rawGTD <- read.csv("GTD.csv", header=TRUE)
 
 #Load the Global Terrorism Database
 rawGTD <- read.csv("GTD.csv", header=TRUE)
