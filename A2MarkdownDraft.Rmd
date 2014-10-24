@@ -12,6 +12,7 @@ bibliography: UTBiblio.bib
 ---
 
 
+
 # Topic and Relevance
 In the past five years, violent extremist groups have attracted significant attention using urban centers as stages. In 2008, Pakistan-based Lashkar-e-Taiba launched a coordinated assault on Mumbai, India which lasted three days and resulted in 164 civilian deaths.  In 2013, Somalia-based Al-Shabaab infiltrated the Westgate mall in Nairobi, Kenya, killing 67 and injuring 175 civilians.  Terrorist groups are a tremendous threat to vulnerable cities.  In both cases, the groups exploited with relative ease the complex flow of systems in the city to achieve desired outcomes. This sparked a debate about terrorist groups' targeting practices and on how to locate, understand, protect against, and mitigate attacks in the face of megatrends like urbanization, population growth, migration, and connectedness.  The urban environment emerges as a unit of analysis for acts of political violence. Future conflicts are expected to take place in crowded, urban, coastal and connected environments instead of landlocked, remote and rural ones. Especially megacities present fertile grounds for inequality and conflict, as well as the most connected, large, yet vulnerable human and physical sub-system for terrorist attacks.  Since 9/11, the fields of geography, urban studies, political science, and many others have contributed to the understanding of terrorist attacks, strategic decision-making, and geospatial aspects of terrorists' targeting behavior. We conduct a large-N analysis using the Global Terrorism Database [@START2013] to illuminate trends in targeting behavior.  Our study aims to fill a gap: On a global scale, is there a trend for terrorists to target urban over rural environments?
 
@@ -81,7 +82,7 @@ After finding a possible correlation between time and targets urbanity and locat
 
 *Note: We use ggplot2 as a package, but are not certain what other packages fall within the range of utility for our study.  The options for other packages will certainly be explored for future assignments.*
 
-```{r, echo=FALSE, message=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 #Load basic R packages
 library(foreign)
 library(car)
@@ -130,7 +131,7 @@ Plotframe <- data.frame(year=GTD$iyear, TUP=TUPforPlot, PROP=PROPforPlot, HUM=GT
 intersepz=data.frame(date=as.numeric(c("27", "38", "41")), date2=as.numeric(c("1997", "2009", "2011")), event=c("PGIS Data Collection End", "CETIS Data Collection End", "ISVG Data Collection End"))
 ```
 
-```{r, echo=FALSE, fig.height=5, fig.width=11, message=FALSE}
+```{r, echo=FALSE, fig.height=5, fig.width=11, message=FALSE, warning=FALSE, comment=FALSE}
 # the first plot shows the count of attack on our categoriesed targets
 PlotTUP <- qplot(factor(year), data=Plotframe, geom = "freqpoly", color = TUP, group = TUP, ylab= "sum of attacks", xlab= "year",
 main="Sum of attacks per year
@@ -141,7 +142,10 @@ PlotTUP + theme(axis.text.x = element_text(angle = 90), complete = TRUE)
 **Table 1.** This table is the first run at massaging our data by looking at total attacks.  Please note the markings for the various data sets of the GTD.
 
 
-```{r, echo=FALSE, fig.height=5, fig.width=11, message=FALSE}
+
+
+
+```{r, echo=FALSE, fig.height=5, fig.width=11, message=FALSE, warning=FALSE, comment=FALSE}
 # the second plot shows the count of attack in different categories of economic damage
 PlotPROP <- qplot(factor(year), data=Plotframe, geom = "freqpoly", color = PROP, group = PROP, ylab= "sum of attacks", xlab= "year",
 main="Sum of attacks per year
@@ -151,6 +155,9 @@ PlotPROP + theme(axis.text.x = element_text(angle = 90), complete = TRUE)
 ```
 **Table 2.** This table looks at the different categorical attacks for economic damage.  Please note the different data set year range.
 
+
+
+
 ```{r, echo=FALSE, fig.height=5, fig.width=11, message=FALSE}
 # the third plot shows the sum of killed and injured of attacks per year
 qplot(year, HUM, data=Plotframe, stat="summary", fun.y="sum", geom ="line",
@@ -159,5 +166,8 @@ with indication for the transition of collecting entities:
 PIGS until 1997, CETIS until 2008, ISVG until 2011 and START since 2011") + geom_vline(data=intersepz, mapping=aes(xintercept=date2))
 ```
 **Table 3.** This table plots the combination of killed and injured per year as a measure of intent and success of the attack. Please note that we also mark the different data set years.
+
+
+
 
 # References
