@@ -56,7 +56,7 @@ PROPforPlot <- recode(GTD$PROPscale, "1= '> Billion $'; 2= '> Million $'; 3='< M
 # In oder to use it in the later charts we recode from the arbitrary 1:5 to a new arbitrary scale that indicates
 # a level of urbanity alreadey. The new element is introduced to become part of a dataframe for plotting. 
 
-TUPforPlot <- recode(TUPforPlot, "1 = '0 - Military and Farmland'; 2 = '2 - Local Governanceand Police'; 
+TUPforPlot <- recode(GTD$TUPscale, "1 = '0 - Military and Farmland'; 2 = '2 - Local Governanceand Police'; 
                      3 = '5 - Potentially Urban Workplace'; 4 = '7 - Potentially Urban Infrastructure'; 5
                      = '9 - Potentially Expressions of Urban Life'", as.numeric.result=FALSE)
 
@@ -66,13 +66,28 @@ Plotframe <- data.frame(year=GTD$iyear, TUP=TUPforPlot, PROP=PROPforPlot, HUM=GT
   
 #as we want to get a sense if different collection issues merged in the GTD, we will split plots with 
 # horizontal lines that indicate an transition on collecting entity (PIGS, CETIS, ISVG, START)
-TUP_intersepz=data.frame(date=as.numeric(c("27", "36", "39")), event=c("PGIS Data Collection End", "CETIS Data Collection End", "ISVG Data Collection End"))
+intersepz=data.frame(date=as.numeric(c("27", "38", "41")), date2=as.numeric(c("1997", "2009", "2011")), event=c("PGIS Data Collection End", "CETIS Data Collection End", "ISVG Data Collection End"))
 
-# the first plot hows the count of attack on our categoriesed targets
-qplot(factor(year), data=Plotframe, geom = "freqpoly", color = TUP, group = TUP) + geom_vline(data=TUP_intersepz, mapping=aes(xintercept=date))
+# the first plot shows the count of attack on our categoriesed targets
+qplot(factor(year), data=Plotframe, geom = "freqpoly", color = TUP, group = TUP, ylab= "sum of attacks", xlab= "year",
+main="Sum of attacks per year
+with indication for the transition on collecting entities:
+PIGS until 1997, CETIS until 2008, ISVG until 2011 and START since 2011") + geom_vline(data=intersepz, 
+                                                                                       mapping=aes(xintercept=date))
 
-# the first plot hows the count of attack on our categoriesed targets
-qplot(factor(year), data=Plotframe, geom = "freqpoly", color = PROP, group = PROP) + geom_vline(data=TUP_intersepz, mapping=aes(xintercept=date))
+# the second plot shows the count of attack in different categories of economic damage
+qplot(factor(year), data=Plotframe, geom = "freqpoly", color = PROP, group = PROP, ylab= "sum of attacks", xlab= "year",
+main="Sum of attacks per year
+with indication for the transition on collecting entities:
+PIGS until 1997, CETIS until 2008, ISVG until 2011 and START since 2011") + geom_vline(data=intersepz,
+                                                                                       mapping=aes(xintercept=date))
+# the third plot shows the sum of killed and injured of attacks per year
+qplot(year, HUM, data=Plotframe, stat="summary", fun.y="sum", geom ="line", 
+ylab= "sum of deaths and injured", main="Sum of casualties per year 
+with indication for the transition on collecting entities:
+PIGS until 1997, CETIS until 2008, ISVG until 2011 and START since 2011") + geom_vline(data=intersepz, 
+                                                                                       mapping=aes(xintercept=date2))
+
 
 
 
