@@ -27,7 +27,7 @@ rawGTD <- read.csv("GTD.csv", header=TRUE)
 #We only want to look at successfull terror attacks and include basic data on time, location and target.
 
 GTD <- subset(rawGTD, select = c(eventid, iyear, imonth, iday, country, region, attacktype1, targtype1, targsubtype1,
-                                  propextent, nkill, nwound),iyear >= 1970 & success == 1, na.strings = c("", " "))
+                                  propextent, nkill, nwound),iyear >= 1970, na.strings = c("", " "))
 
 ### We introduce our first scale: "Targets Urbanity Potential Scale (TUPscale)"
 GTD["TUPscale"] <- GTD$targsubtype1
