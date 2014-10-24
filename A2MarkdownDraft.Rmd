@@ -66,7 +66,7 @@ Merging the datasets over cities will be easy, but special cases of city renamin
 The analysis will focus on multivariate statistical regression models for describing a potential trend in the urbanity of terror attacks in terms of the chosen city and the chosen target over time. Descriptive inference such that our results will leads us to reject a null hypothesis that attacks have not changed over time in targeting urban life and space that goes beyond the growth of this space over time.  
 
 To include the success of the attacks, weights for killed and injured humans will be added to each attack, as well as property damage in a second round. It might be necessary to manipulate the property damage in terms of the relative wealth of the country to account in country variation in the potential wealth that can be destroyed.
-For all our results, we will conduct a significance-test.
+For all our results, we will conduct a significance-test.  
 
 Necessary controls are the:
 
@@ -78,6 +78,8 @@ Necessary controls are the:
 To elaborate on the last point, we created three preliminary charts to shop how transition in data collecting entities influences variables of our interest.
 
 After finding a possible correlation between time and targets urbanity and locations urbanity, analyzing trends in targeting behavior on the regional, country, or group level will be easy to execute as the GTD contain variables for all attacks.
+
+*Note: We use ggplot2 as a package, but are not certain what other packages fall within the range of utility for our study.  The options for other packages will certainly be explored for future assignments.*
 
 ```{r, echo=FALSE, message=FALSE}
 #Load basic R packages
