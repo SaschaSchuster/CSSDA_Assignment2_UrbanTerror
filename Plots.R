@@ -18,9 +18,6 @@ library(foreign)
 library(car)
 library(ggplot2)
 
-#set Working Depositoty
-setwd("C:/Users/Lokus/Dropbox/Master Thesis/GitHub-Repo/UrbanTerror")
-
 #Load the Global Terrorism Database
 rawGTD <- read.csv("GTD.csv", header=TRUE)
 
