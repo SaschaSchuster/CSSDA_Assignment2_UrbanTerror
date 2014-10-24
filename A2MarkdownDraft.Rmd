@@ -84,12 +84,6 @@ Necessary controls are the:
 
 To elaborate on the last point, we created three preliminary charts to shop how transition in data collecting entities influences variables of our interest. 
   
-  
-  
-  
 After finding a possible correlation between time and targets urbanity and locations urbanity, analyzing trends in targeting behavior on the regional, country, or group level will be easy to execute as the GTD contain variables for all attacks. 
-
-After finding a possible correlation between time and targets urbanity and locations urbanity, analyzing trends in targeting behavior on the regional, country, or group level will be easy to execute as the GTD contain variables for all attacks.
-
 
 # References
