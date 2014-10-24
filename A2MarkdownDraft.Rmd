@@ -6,7 +6,7 @@ output:
     pdf_document:
         toc: true
 bibliography:
-    - t.bib
+    - UTBiblio.bib
 ---
 
 *This is the explanation for our research question and preparation of data for statistical analysis (assignment 2).*
