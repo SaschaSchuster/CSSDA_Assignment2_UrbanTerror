@@ -64,7 +64,7 @@ TUPforPlot <- recode(TUPforPlot, "1 = '0 - Military and Farmland'; 2 = '2 - Loca
 #prepare a data frame for plotting
 Plotframe <- data.frame(year=GTD$iyear, TUP=TUPforPlot, PROP=PROPforPlot, HUM=GTD$HUMscale)
   
-#as we want to get a sense if different collection issues merged in the GTD, we will splitt plots with 
+#as we want to get a sense if different collection issues merged in the GTD, we will split plots with 
 # horizontal lines that indicate an transition on collecting entity (PIGS, CETIS, ISVG, START)
 TUP_intersepz=data.frame(date=as.numeric(c("27", "36", "39")), event=c("PGIS Data Collection End", "CETIS Data Collection End", "ISVG Data Collection End"))
 
