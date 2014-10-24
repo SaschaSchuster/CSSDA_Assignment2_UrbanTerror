@@ -1,10 +1,10 @@
 ---
-title: "Research Proposal - A Turn Toward Urban"
-author: "Sascha Schuster, Lukas Bretzinger, Cameron Reed"
-date: "October 24, 2014"
-output: pdf_document:
-  toc: true
-bibliography: BiblioProposal.bib
+title:"Research Proposal - A Turn Toward Urban"
+author:"Sascha Schuster, Lukas Bretzinger, Cameron Reed"
+date:"October 24, 2014"
+output:pdf_document:
+  toc:true
+bibliography:BiblioProposal.bib
 ---
 
 *This is the explanation for our research question and preparation of data for statistical analysis (assignment 2).* 
