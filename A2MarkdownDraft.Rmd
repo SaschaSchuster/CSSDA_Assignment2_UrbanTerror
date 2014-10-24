@@ -84,6 +84,9 @@ library(foreign)
 library(car)
 library(ggplot2)
 
+#download a limited GTD we created for this assignment (5MB instead of 100MB) file 
+download.file(url="http://bit.ly/1sjaJ2M", destfile="GTD.csv", quiet = FALSE)
+
 #Load the Global Terrorism Database
 rawGTD <- read.csv("GTD.csv", header=TRUE)
 
