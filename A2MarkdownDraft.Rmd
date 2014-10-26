@@ -90,7 +90,7 @@ library(car)
 library(ggplot2)
 library(RCurl)
 
-#download a limited GTD we created for this assignment (5MB instead of 100MB) file
+#download a limited GTD we created for this assignment (5MB instead of 100MB file)
 GTD_in_Memory <- getURL("https://rawgit.com/SaschaSchuster/CSSDA_Assignment2_UrbanTerror/master/GTD.csv", ssl.verifypeer=0L, followlocation=1L)
 writeLines(GTD_in_Memory,'GTD.csv')
 
@@ -112,16 +112,12 @@ GTD$TUPscale <- recode(GTD$TUPscale, "40:42 = 3; 9 = 1; 27:35 = 1; 37:39 = 1; 65
 GTD["PROPscale"] <- GTD$propextent
 GTD$PROPscale <- as.numeric(GTD$PROPscale)
 
-### We introduce our second scale: "Extent of Human Damage (HUMscale)" which adds wounded and killed
+### We introduce our third scale: "Extent of Human Damage (HUMscale)" which adds wounded and killed
 GTD["HUMscale"] <- GTD$nkill+GTD$nwound
 GTD$HUMscale <- as.numeric(GTD$HUMscale)
 
-#Bring down to self explanatory values for the Plot
+# We start preparing our first two scales for plotting, recode to rather self explanatory values 
 PROPforPlot <- recode(GTD$PROPscale, "1= '> Billion $'; 2= '> Million $'; 3='< Million $'; 4='no economic damage'; NA=NA; 0=NA")
-
-# In oder to use it in the later charts we recode from the arbitrary 1:5 to a new arbitrary scale that indicates
-# a level of urbanity alreadey. The new element is introduced to become part of a dataframe for plotting.
-
 TUPforPlot <- recode(GTD$TUPscale, "1 = '0 - Military and Farmland'; 2 = '2 - Local Governanceand Police'; 3 = '5 - Potentially Urban Workplace'; 4 = '7 - Potentially Urban Infrastructure'; 5 = '9 - Potentially Expressions of Urban Life'", as.numeric.result=FALSE)
 
 #prepare a data frame for plotting
@@ -129,6 +125,7 @@ Plotframe <- data.frame(year=GTD$iyear, TUP=TUPforPlot, PROP=PROPforPlot, HUM=GT
 
 #as we want to get a sense if different collection issues merged in the GTD, we will split plots with
 # horizontal lines that indicate an transition on collecting entity (PIGS, CETIS, ISVG, START)
+# adding another layer with text in the plot never worked out, but we kept 'events' in the data frame
 intersepz=data.frame(date=as.numeric(c("27", "38", "41")), date2=as.numeric(c("1997", "2009", "2011")), event=c("PGIS Data Collection End", "CETIS Data Collection End", "ISVG Data Collection End"))
 ```
 
